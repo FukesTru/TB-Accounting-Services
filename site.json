@@ -1,0 +1,135 @@
+{
+  "business": {
+    "name": "TB Accounting Services",
+    "known_as": "TB Accounting Services",
+    "legal_name": "TB Accounting Services, LLC",
+    "street": "66 E Santa Clara St, Ste 7",
+    "city": "San Jose",
+    "state": "CA",
+    "postal_code": "95113",
+    "country": "US",
+    "phone": "(408) 898-1701",
+    "email": "info@tbacct.com",
+    "website_current": "https://www.tbacct.com",
+    "timezone": "America/Los_Angeles",
+    "owner": "Robert Carrillo"
+  },
+  "online": {
+    "facebook": "",
+    "instagram": "",
+    "linkedin": "https://www.linkedin.com/company/tbaccountingservices",
+    "google_business_profile": "https://share.google/0ApDcWpbmTD308oNJ",
+    "google_review_link": ""
+  },
+  "hours": "Monday to Friday 9 AM to 7 PM; Saturday and Sunday closed (from the Office Hours on the current site contact page, client to confirm)",
+  "areas_served": [
+    "Clients across the United States and internationally (CSV: \"we have clients around the country and globe.\")",
+    "Based in San Jose, CA; remote in real time or in person. No towns listed, so no town pages."
+  ],
+  "services": [
+    "Bookkeeping & Accounting",
+    "Controller Services",
+    "Fractional CFO",
+    "Tax Services",
+    "Forensic Accounting",
+    "Trust Accounting",
+    "Financial Investigations",
+    "Expert Witness Services"
+  ],
+  "booking_system_current": "",
+  "brand": {
+    "colour_main": "#005E94",
+    "colour_accent": "#CC9933",
+    "colours_other": [
+      "#0A2B44 (dark band, derived from the brand blue)",
+      "#F6F3EC (tinted band)",
+      "#8A6214 (gold darkened for small text on light backgrounds)"
+    ],
+    "font": "Source Serif 4 (headings) + Inter (body); Montserrat for the wordmark, matching the lettering in the logo",
+    "notes": "Client wrote \"i know know the colors\" (read as \"I don't know the colors\") and gave no fonts. Blue #005E94 and gold #CC9933 were sampled from logo-mark.png on the current site, so they are observed values, not client-supplied. Logo format given as SVG / AI / EPS in a Google Drive folder that needs sign-in; PNGs from the current site are used until the originals arrive."
+  },
+  "images": [
+    {
+      "file": "images/logo/logo-mark.png",
+      "note": "Official logo icon from the current site: blue open book with gold bars, transparent PNG 2001x1709. Primary mark."
+    },
+    {
+      "file": "images/logo/logo-icon.png",
+      "note": "logo-mark.png trimmed to its edges and scaled to 320px wide, unchanged artwork. Used in the header, footer and opening animation."
+    },
+    {
+      "file": "images/logo/logo-lockup-wide.png",
+      "note": "High-res transparent lockup with website, phone and taglines. Reference only, not used on pages."
+    },
+    {
+      "file": "images/logo/logo-lockup-1a.jpg",
+      "note": "Colour lockup on white, reference for colours. Not used on pages."
+    },
+    {
+      "file": "images/logo/logo-lockup-1a-transparent.png",
+      "note": "Lower-res transparent colour lockup. Reference only."
+    },
+    {
+      "file": "images/logo/logo-header-current.png",
+      "note": "Lockup used in the current site header. Fallback reference only."
+    },
+    {
+      "file": "images/hero-office-desk.jpg",
+      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Sunlit walnut desk with an open laptop showing charts, a coffee cup and folders, beside a window over a palm-lined downtown street. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/bookkeeping-accounting.jpg",
+      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Hands writing in a ledger beside a pile of receipts, a calculator and a laptop. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/controller-services.jpg",
+      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Conference table with a laptop and a large monitor showing financial dashboards, printed reports and a city view. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/fractional-cfo.jpg",
+      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Quiet office with a leather notebook, a fountain pen and a laptop showing a chart, with a city skyline and palm trees outside. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/tax-services.jpg",
+      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Desk with binders, a tray of folders, a closed laptop and eyeglasses in soft morning window light. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/forensic-accounting.jpg",
+      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Hands comparing two stacks of highlighted spreadsheet printouts, with a highlighter, a pencil and a magnifying loupe. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/trust-accounting.jpg",
+      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Cloth-bound ledgers, a tray of neatly filed folders and a brass paperweight on a sunlit desk. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/financial-investigations.jpg",
+      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Person holding two sets of printed financial records beside a laptop, comparing them line by line. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/expert-witness-services.jpg",
+      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Wood-paneled conference room with a binder, a legal pad, a glass of water and an empty chair. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "favicon.png",
+      "note": "512x512 favicon made from the logo icon"
+    },
+    {
+      "file": "apple-touch-icon.png",
+      "note": "180x180 icon on white made from the logo icon"
+    },
+    {
+      "file": "og-image.png",
+      "note": "1200x630 social sharing image: logo, wordmark, tagline and a crop of the AI-generated hero illustration"
+    }
+  ],
+  "must_keep": "Client note: \"we have a subsidiary for our tax division.\" The subsidiary is not named on the current site, so it is left out of public copy until the client confirms its name and how it should appear.",
+  "integrations": {
+    "form_embed": "<iframe\n    src=\"https://api.leadconnectorhq.com/widget/form/B6mbkrbmNfkfvPxD8iLj\"\n    style=\"width:100%;height:100%;border:none;border-radius:10px\"\n    id=\"inline-B6mbkrbmNfkfvPxD8iLj\"\n    data-layout=\"{'id':'INLINE'}\"\n    data-trigger-type=\"alwaysShow\"\n    data-trigger-value=\"\"\n    data-activation-type=\"alwaysActivated\"\n    data-activation-value=\"\"\n    data-deactivation-type=\"neverDeactivate\"\n    data-deactivation-value=\"\"\n    data-form-name=\"Website Form (TB Accounting Services)\"\n    data-height=\"543\"\n    data-layout-iframe-id=\"inline-B6mbkrbmNfkfvPxD8iLj\"\n    data-form-id=\"B6mbkrbmNfkfvPxD8iLj\"\n    data-cookie-consent=\"true\"\n    data-cookie-consent-provider=\"auto\"\n    title=\"Website Form (TB Accounting Services)\"\n        >\n</iframe>\n<script src=\"https://link.msgsndr.com/js/form_embed.js\"></script>",
+    "chat_widget": "<script src=\"https://widgets.leadconnectorhq.com/loader.js\" data-resources-url=\"https://widgets.leadconnectorhq.com/chat-widget/loader.js\" data-widget-id=\"6af78677f31f8c02e6a53de4\"></script>",
+    "review_link": "https://share.google/0ApDcWpbmTD308oNJ"
+  },
+  "crm_location_id": "",
+  "vercel_project": "",
+  "preview_url": "",
+  "domain": "www.tbacct.com"
+}
