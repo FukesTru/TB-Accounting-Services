@@ -4,6 +4,7 @@
 
 @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(/assets/fonts/inter-latin.woff2) format('woff2'); }
 @font-face { font-family: 'Source Serif 4'; font-style: normal; font-weight: 600; font-display: swap; src: url(/assets/fonts/sourceserif4-600-latin.woff2) format('woff2'); }
+@font-face { font-family: 'Source Serif 4'; font-style: normal; font-weight: 700; font-display: swap; src: url(/assets/fonts/sourceserif4-700-latin.woff2) format('woff2'); }
 @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 600 700; font-display: swap; src: url(/assets/fonts/montserrat-caps.woff2) format('woff2'); unicode-range: U+20, U+2C, U+2E, U+41-5A; }
 
 :root {
@@ -27,7 +28,8 @@
   --font-head: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-mark: 'Montserrat', 'Inter', system-ui, sans-serif;
-  --fs-h1: clamp(2rem, 1.2rem + 3vw, 3.5rem);           /* 32px phone, 56px desktop */
+  --fs-h1: clamp(2.5rem, 1.35rem + 4.8vw, 4.25rem);     /* home headline: about 40px phone, 68px desktop */
+  --fs-h1-inner: clamp(2.25rem, 1.4rem + 3.2vw, 3.5rem); /* other pages: 36px phone, 56px desktop */
   --fs-h2: clamp(1.75rem, 1.4rem + 1.5vw, 2.625rem);    /* 28px phone, 42px desktop */
   --fs-h3: clamp(1.1875rem, 1.1rem + 0.35vw, 1.375rem); /* 19px phone, 22px desktop */
   --fs-body: clamp(1rem, 0.96rem + 0.18vw, 1.0625rem);  /* 16px phone, 17px desktop */
@@ -63,7 +65,8 @@ a:hover { color: var(--blue-dark); }
 :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
 h1, h2, h3 { font-family: var(--font-head); font-weight: 600; color: var(--ink); margin: 0; letter-spacing: -0.012em; text-wrap: pretty; }
 h1 { text-wrap: balance; }
-h1 { font-size: var(--fs-h1); line-height: 1.08; letter-spacing: -0.02em; }
+h1 { font-size: var(--fs-h1-inner); font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; }
+.hero--home h1 { font-size: var(--fs-h1); }
 h2 { font-size: var(--fs-h2); line-height: 1.15; }
 h3 { font-size: var(--fs-h3); line-height: 1.3; }
 p { margin: 0 0 1em; }
@@ -189,7 +192,8 @@ html.menu-open .mobile-bar { visibility: hidden; }
 @media (min-width: 960px) { .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 64px; } }
 .hero-media { position: relative; isolation: isolate; }
 .hero-media .media { aspect-ratio: 4 / 3; }
-.hero-media::after { content: ""; position: absolute; left: -14px; bottom: -14px; width: 42%; height: 42%; border-left: 3px solid var(--gold); border-bottom: 3px solid var(--gold); border-bottom-left-radius: var(--radius); z-index: -1; }
+.hero-media::after { content: ""; position: absolute; inset: 12px -12px -12px 12px; border: 2px solid var(--gold); border-radius: var(--radius); z-index: -1; pointer-events: none; }
+@media (min-width: 960px) { .hero-media::after { inset: 18px -18px -18px 18px; } }
 .hero--plain { padding-bottom: clamp(40px, 5vw, 72px); }
 .page-hero { padding: clamp(40px, 6vw, 88px) 0 clamp(48px, 6vw, 88px); }
 
@@ -458,7 +462,7 @@ html:not(.js) .menu-toggle { display: none; }
 @media (min-width: 960px) {
   .hero-grid--reverse { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); }
   .hero-grid--reverse .hero-media { order: -1; }
-  .hero-grid--reverse .hero-media::after { left: auto; right: -14px; border-left: 0; border-right: 3px solid var(--gold); border-bottom-left-radius: 0; border-bottom-right-radius: var(--radius); }
+  .hero-grid--reverse .hero-media::after { inset: 18px 18px -18px -18px; }
 }
 
 /* Phone hero: call and contact buttons come straight after the heading, so both are on screen before scrolling */
@@ -470,3 +474,70 @@ html:not(.js) .menu-toggle { display: none; }
 }
 .final-cta .lede { margin-top: 16px; }
 @media (min-width: 1100px) { .footer-grid > .footer-brand, .footer-grid > .footer-hours { grid-column: auto; } }
+
+/* ===== Revision 2 ===== */
+/* Home hero: eyebrow, headline and short lede, then the photo, then the buttons, then the rest (phone). Two columns on desktop */
+.hero--home { padding-top: clamp(28px, 5vw, 80px); }
+.hero-grid--home { grid-template-areas: "head" "media" "actions" "more"; gap: 28px; }
+.hero-grid--home .hero-head { grid-area: head; }
+.hero-grid--home .hero-media { grid-area: media; }
+.hero-grid--home .hero-actions { grid-area: actions; }
+.hero-grid--home .hero-more { grid-area: more; }
+.hero-grid--home .hero-actions .btn-pair { margin-top: 0; }
+.hero-more p { font-size: var(--fs-lede); line-height: 1.6; }
+.hero--home .eyebrow { margin-bottom: 18px; }
+.hero--home h1 { margin-bottom: 4px; }
+@media (max-width: 959px) { .hero-grid--home .hero-media .media { aspect-ratio: 16 / 9; } }
+@media (min-width: 960px) {
+  .hero-grid--home { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); grid-template-areas: "head media" "more media" "actions media"; column-gap: 72px; row-gap: 0; align-content: center; }
+  .hero-grid--home .hero-media { align-self: center; }
+  .hero-grid--home .hero-more { margin-top: 14px; }
+  .hero-grid--home .hero-actions { margin-top: 32px; }
+}
+
+/* Proof strip: every item on 2 balanced lines, icons level */
+.proof-list li { font-size: 0.96875rem; }
+.proof-list li span { text-wrap: balance; }
+.proof-list .icon { align-self: center; }
+
+/* Pain points: a 2 by 3 set under a short intro */
+.pain-grid { list-style: none; display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .pain-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .pain-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } }
+.pain-grid li { display: flex; gap: 16px; align-items: flex-start; height: 100%; padding: 24px; background: var(--tint); border-radius: var(--radius); color: var(--ink); font-size: 1.0625rem; font-weight: 500; line-height: 1.5; }
+.pain-grid li::before { content: ""; flex: none; width: 10px; height: 10px; margin-top: 8px; border-radius: 2px; background: var(--gold); }
+.pain-grid + .inline-cta { margin-top: 32px; }
+
+/* Why section: pull-quote and buttons on the left, 4 points in a 2 by 2 grid on the right */
+.split--why { align-items: center; }
+.points { display: grid; gap: 28px 40px; grid-template-columns: 1fr; }
+@media (min-width: 700px) { .points { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.point { padding-top: 20px; border-top: 2px solid var(--gold); }
+.point h3 { margin-bottom: 10px; }
+
+/* Rows where both columns should match in height */
+.split--stretch { align-items: stretch; }
+.split--stretch > .owner-card { display: flex; flex-direction: column; justify-content: center; }
+.media-col { display: flex; }
+.media--fill { width: 100%; min-height: 300px; height: 100%; }
+.hero-panel { padding: 24px; background: var(--tint); border-radius: var(--radius); display: flex; flex-direction: column; justify-content: center; }
+.hero-panel .fact { border-color: transparent; }
+
+/* Final call band: heading on the left, a matching action card on the right */
+@media (min-width: 1000px) { .final-cta-grid { grid-template-columns: minmax(0, 1fr) minmax(320px, 400px); } }
+.final-actions { display: grid; gap: 12px; padding: 28px; background: var(--navy-2); border-radius: var(--radius); }
+.final-actions .btn { width: 100%; }
+.final-cta .final-actions .final-email { margin-top: 8px; }
+.final-hours { display: flex; align-items: center; gap: 10px; margin: 0; color: var(--on-navy); font-size: var(--fs-small); }
+.final-hours .icon { color: var(--gold-light); }
+
+/* Contact: disclaimer sits under the details, away from the chat bubble corner, with room below the form */
+.contact-section { padding-bottom: calc(var(--section) + 32px); }
+.contact-section .form-note { margin-top: 20px; }
+.mobile-bar { transition: opacity .25s var(--ease), visibility .25s; }
+html.contact-in-view .mobile-bar { opacity: 0; visibility: hidden; }
+.split--pair { align-items: center; }
+.split--pair > .statement { margin: 0; }
+.split--pair > div > p:first-child { margin-top: 0; }
+.notfound-links.hero-panel { margin-top: 0; padding: 32px; gap: 16px; }
+.aim-stack > .statement { margin: 0; }

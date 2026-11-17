@@ -12,9 +12,9 @@ Internal notes for the operator. `VERIFY.md` is the client-facing list and can b
 - **Domain set to `www.tbacct.com`**, so every canonical, Open Graph URL and the sitemap already use `https://www.tbacct.com/`. The live WordPress site is still on that domain until go-live.
 - **No placeholders or [VERIFY] markers on the pages** (MASTER-PROMPT section 5 wins over the brief here). Gaps are written neutrally on the page and listed in `VERIFY.md`. `node tools/check.mjs --missing` therefore reports nothing.
 
-## Pages (16)
+## Pages (15)
 
-`/`, `/services/`, 8 service pages under `/services/`, `/about/`, `/fees/`, `/contact/`, `/privacy/`, `/terms/`, and `404.html` (noindex). Every page has a `#contact` section with the GoHighLevel form, the final call band, and the chat widget once before `</body>`.
+`/`, `/services/`, 8 service pages under `/services/`, `/about/`, `/contact/`, `/privacy/`, `/terms/`, and `404.html` (noindex). The Fees page was removed in revision 2; `/fees` and `/fees/` redirect to `/contact/` in `vercel.json`. Every page has a `#contact` section with the GoHighLevel form, the final call band, and the chat widget once before `</body>`.
 
 ## Integrations (in `site.json`, used character for character)
 
@@ -46,6 +46,18 @@ Internal notes for the operator. `VERIFY.md` is the client-facing list and can b
 
 ## Checks run
 
-- `node tools/check.mjs`: 16 pages, 0 to fix, 0 to know about.
+- `node tools/check.mjs`: 15 pages, 0 to fix, 0 to know about (after revision 2).
 - Browser checks (Playwright, phone and desktop): no broken internal links or image paths, no sideways scrolling on a phone, no skipped heading levels, no duplicate ids, a single form iframe per page, menu and dropdown work by keyboard, Contact us buttons land on the form, the intro plays once and skips correctly, and nothing shows with reduced motion.
 - Search of `public/` for demo, lorem, placeholder, VERIFY, TODO, expert, specialist, guarantee and long dashes: the only "expert" hits are the service name Expert Witness Services and its address.
+
+## Revision 2 (client feedback, November 2026)
+
+- **Headline.** Home H1 is exactly `Clear books.<br>Clearer decisions.` at `--fs-h1` (about 40px on a phone, 68px on desktop), Source Serif 4 700 (self-hosted, `sourceserif4-700-latin.woff2`), letter-spacing -0.03em, line-height 1.05. Other pages use `--fs-h1-inner` (36 to 56px) at the same weight. The factual lede stays: 2 sentences under the headline, the rest after the buttons. On a phone the order is eyebrow, headline, short lede, photo, buttons, then the rest.
+- **No pricing anywhere.** The Fees page, its nav, mobile menu and footer links, the home "How our fees work" link, the cost FAQs (home, Financial Investigations, Expert Witness Services, including their FAQPage JSON-LD), the Bookkeeping fees callout (now a free-consultation note) and the 404 fees link are gone. Step 4 on the home page is now "You get a clear scope". The only remaining fee words are a trust's own "taxes and fees" and "trustee fees" in the trust accounting checklist, which describe the client's trust, not our charges.
+- **Spacing.** Proof strip items are 2 balanced lines each. Pain points are a 2 by 3 grid under a short intro, with the link after the list. The "why" row has the pull-quote and buttons on the left and 4 points in a 2 by 2 grid. The Robert card fills its row. The final call band has a matching action card. Short-heading rows on service pages were restacked (heading on top, statement and text side by side). Services hero facts sit in a tinted panel; "other support" and "industries" are single-column with pills.
+- **Contact and chat.** The form embed and chat snippet are unchanged. The form disclaimer moved to the left column, away from the chat bubble corner, and the contact section has extra bottom room. On phones the round call and contact buttons fade out while the form is on screen and come back after. Contact buttons centre the form above the chat button zone (92px on phones, 100px on desktop).
+- **Gold accent.** The hero image accent is now an offset gold frame with the same corner radius.
+
+### Photos: not replaced yet
+
+The revision asks for 9 new Higgsfield photos. The hero photo was generated (GPT Image 2.6, high, 2K, 16:9; Higgsfield job `b98ff133-fd6c-46bb-a406-342512f56b54`), but it could not be downloaded into the build session: Claude Code's auto-mode permission check refused every download from Higgsfield's file host (`d8j0ntlcm91z4.cloudfront.net`), even after that host was added to the cloud environment's network allowlist. The other 8 were not generated, so no credits were spent on images nobody could review. The current photos in `public/images/` are still the first-build set. To finish: allow downloads from that host for this repo (a permission rule for Bash or WebFetch), then rerun the photo step with the prompts in the revision brief.

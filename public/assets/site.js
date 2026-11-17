@@ -66,7 +66,7 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   /* Every Contact us button lands with the whole form in the middle of the screen */
-  function barHeight() { return desktop.matches ? 0 : 92; } /* round buttons: 56px + 20px from the bottom + a little air */
+  function barHeight() { return desktop.matches ? 100 : 92; } /* keep the form above the round buttons and the chat button */
   function centerForm(smooth) {
     var card = d.querySelector('#contact .form-card') || d.getElementById('contact');
     if (!card) return false;
@@ -98,6 +98,14 @@
   });
   if (location.hash === '#contact') {
     window.addEventListener('load', function () { setTimeout(function () { centerForm(false); }, 150); });
+  }
+
+  /* While the contact form is on screen, the round call and contact buttons step aside so they never sit over the form */
+  var formCard = d.querySelector('#contact .form-card');
+  if (formCard && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { html.classList.toggle('contact-in-view', en.isIntersecting); });
+    }, { threshold: 0.12 }).observe(formCard);
   }
 
   /* Scroll movement: sections settle into place as they come into view */

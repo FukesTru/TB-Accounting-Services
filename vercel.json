@@ -43,6 +43,16 @@
   ],
   "redirects": [
     {
+      "source": "/fees",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/fees/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
       "source": "/contact-us",
       "destination": "/contact/",
       "permanent": true
