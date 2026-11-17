@@ -90,10 +90,19 @@ Your new website is built and ready for review. Before it goes live on www.tbacc
 41. The page says you can provide financial analysis, written reports, support for deposition and trial testimony, and consulting help that does not involve testifying. It does not claim any past testimony. Please tell us who would testify and their qualifications, and confirm the consulting role.
 42. "Before we take on a matter, we check the parties for conflicts."
 
+### Service area pages (new)
+
+43. **New pages:** Service Areas, plus pages for San Jose, Santa Clara, Sunnyvale, Milpitas and Campbell. None of them claims clients, client counts or results in any city. Please confirm you are happy to be shown as serving each of these cities.
+44. **San Jose:** we list the neighborhoods Downtown, Japantown, Willow Glen, the Rose Garden, Berryessa, Evergreen and Almaden as places businesses can work with you from. We say the Santa Clara County Superior Court and a U.S. District Court courthouse are in downtown San Jose, "a short walk from our office."
+45. **Santa Clara:** described as "known for its technology companies," with a focus on controller and fractional CFO work.
+46. **Sunnyvale:** focus on bookkeeping and tax for owner-run businesses and professionals. The page names the Franchise Tax Board, the Department of Tax and Fee Administration and the Employment Development Department as the state agencies a California business may deal with. It does not say you file sales tax or payroll returns. Tell us if you do and want that said.
+47. **Milpitas:** focus on construction, manufacturing and real estate businesses, with job costing, a month-end close and cash flow forecasts, and reports by job, product line or property.
+48. **Campbell:** focus on trust accounting, forensic accounting and bookkeeping for retail shops and professional practices, with the same California trustee rule as the Trust Accounting page.
+
 ### Privacy policy and terms of use
 
-43. Your current website has neither, so we wrote both for your firm. Please read them, especially the text message section, the names of the services we use for the form and chat (LeadConnector) and hosting (Vercel), "a client relationship starts only when we both agree in writing," and California law with Santa Clara County courts.
+49. Your current website has neither, so we wrote both for your firm. Please read them, especially the text message section, the names of the services we use for the form and chat (LeadConnector) and hosting (Vercel), "a client relationship starts only when we both agree in writing," and California law with Santa Clara County courts.
 
 ### Photos
 
-44. Every photo on the site is an AI-generated illustration, chosen to fit each service. None shows your office, staff or clients, and the site never presents them that way. If you have real photos of your office or team, we would be glad to use them instead.
+50. Every photo on the site is a new AI-generated illustration, used on one page only and labelled "Illustrative photo" in its description. None shows your office, staff or clients, and the site never presents them that way. If you have real photos of your office or team, we would be glad to use them instead.

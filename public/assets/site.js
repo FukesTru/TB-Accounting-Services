@@ -108,6 +108,16 @@
     }, { threshold: 0.12 }).observe(formCard);
   }
 
+  /* Round call and contact buttons wait until the visitor has scrolled past the hero, so they never cover the hero buttons */
+  var hero = d.querySelector('main > section');
+  if (hero && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { html.classList.toggle('show-fabs', !en.isIntersecting); });
+    }, { threshold: 0 }).observe(hero);
+  } else {
+    html.classList.add('show-fabs');
+  }
+
   /* Scroll movement: sections settle into place as they come into view */
   if (!reduce && 'IntersectionObserver' in window) {
     var items = d.querySelectorAll('[data-reveal]');

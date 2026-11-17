@@ -83,7 +83,8 @@ for (const f of pages) {
 
   if (/<table[\s>]/i.test(html)) fail(where, 'contains a table. No tables anywhere: use cards or label and value pairs');
   if (DASHES.test(html)) fail(where, 'contains an em dash or en dash. Use a period, comma or parentheses');
-  if (/breadcrumb/i.test(html)) fail(where, 'contains a breadcrumb. The header menu is the only navigation');
+  // Visible breadcrumbs are banned; BreadcrumbList structured data (JSON-LD, never shown) is allowed.
+  if (/breadcrumb/i.test(html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/gi, ''))) fail(where, 'contains a breadcrumb. The header menu is the only navigation');
 
   for (const m of html.matchAll(/\b(?:src|href|action)=["']([^"']+)["']/gi)) {
     if (BOOKING_OR_PAYMENT.test(m[1])) fail(where, `links or embeds ${m[1]}. The site never books and never takes payment`);

@@ -12,9 +12,9 @@ Internal notes for the operator. `VERIFY.md` is the client-facing list and can b
 - **Domain set to `www.tbacct.com`**, so every canonical, Open Graph URL and the sitemap already use `https://www.tbacct.com/`. The live WordPress site is still on that domain until go-live.
 - **No placeholders or [VERIFY] markers on the pages** (MASTER-PROMPT section 5 wins over the brief here). Gaps are written neutrally on the page and listed in `VERIFY.md`. `node tools/check.mjs --missing` therefore reports nothing.
 
-## Pages (15)
+## Pages (21)
 
-`/`, `/services/`, 8 service pages under `/services/`, `/about/`, `/contact/`, `/privacy/`, `/terms/`, and `404.html` (noindex). The Fees page was removed in revision 2; `/fees` and `/fees/` redirect to `/contact/` in `vercel.json`. Every page has a `#contact` section with the GoHighLevel form, the final call band, and the chat widget once before `</body>`.
+`/`, `/services/`, 8 service pages under `/services/`, `/service-areas/` plus 5 city pages (San Jose, Santa Clara, Sunnyvale, Milpitas, Campbell), `/about/`, `/contact/`, `/privacy/`, `/terms/`, and `404.html` (noindex). The Fees page was removed in revision 2; `/fees` and `/fees/` redirect to `/contact/` in `vercel.json`. Every page has a `#contact` section with the GoHighLevel form, the final call band, and the chat widget once before `</body>`.
 
 ## Integrations (in `site.json`, used character for character)
 
@@ -58,6 +58,16 @@ Internal notes for the operator. `VERIFY.md` is the client-facing list and can b
 - **Contact and chat.** The form embed and chat snippet are unchanged. The form disclaimer moved to the left column, away from the chat bubble corner, and the contact section has extra bottom room. On phones the round call and contact buttons fade out while the form is on screen and come back after. Contact buttons centre the form above the chat button zone (92px on phones, 100px on desktop).
 - **Gold accent.** The hero image accent is now an offset gold frame with the same corner radius.
 
-### Photos: not replaced yet
+### Photos (resolved in revision 3)
 
-The revision asks for 9 new Higgsfield photos. The hero photo was generated (GPT Image 2.6, high, 2K, 16:9; Higgsfield job `b98ff133-fd6c-46bb-a406-342512f56b54`), but it could not be downloaded into the build session: Claude Code's auto-mode permission check refused every download from Higgsfield's file host (`d8j0ntlcm91z4.cloudfront.net`), even after that host was added to the cloud environment's network allowlist. The other 8 were not generated, so no credits were spent on images nobody could review. The current photos in `public/images/` are still the first-build set. To finish: allow downloads from that host for this repo (a permission rule for Bash or WebFetch), then rerun the photo step with the prompts in the revision brief.
+Revision 2 could not download Higgsfield results. In revision 3 the operator approved `d8j0ntlcm91z4.cloudfront.net` and downloads worked, so all photos were replaced (below).
+
+## Revision 3 (agency owner review, November 2026)
+
+- **Photos.** All 9 first-build photo sets were deleted. 17 new Higgsfield photos (GPT Image 2.6, high, 2K, 16:9) were generated, each inspected for hands, faces, screens, charts, readable text, a glossy look, snow and big-city skylines, and all 17 passed first time. **Each photo is used on one page only**: `node tools/image-dupes.mjs public` (new, from the brief) checks it and prints OK. Page-to-photo map is in `public/images/README.md` and `site.json`. Alt text starts "Illustrative photo:". Note: the brief's grep for old filenames (`fractional-cfo\.`) also matches the new `svc-fractional-cfo.jpg` named in the brief; no old file remains.
+- **No photos on cards.** Home and `/services/` service cards are icon cards. `/services/` has its own hero photo. The extra photo copies in the Bookkeeping cleanup section and the Financial Investigations tracing section are gone (3 icon cards and a 3 by 2 steps grid instead).
+- **Service area pages.** `/service-areas/` and 5 city pages, each with 600 or more words of page-specific copy, the sections in the order the brief set, 4 FAQs (FAQPage JSON-LD), BreadcrumbList JSON-LD and an AccountingService block whose `areaServed` is that city. Sitewide JSON-LD now lists the 5 cities and Santa Clara County. "Service Areas" sits after Services in the main and mobile menus (fits on one row from 1100px; below that the hamburger menu shows), and the footer has a "Service areas" column. Linked from the home "Do you have to be in San Jose" section and from `/contact/`.
+- **Kit checker change.** `tools/check.mjs` failed any page containing the word "breadcrumb", which blocked the required BreadcrumbList JSON-LD. It now ignores JSON-LD and still fails a visible breadcrumb.
+- **Phone hero.** The round call and contact buttons stay hidden until the visitor scrolls past the hero (and while the form is on screen), so both hero buttons are clear at 390x844. On the home page the phone order is now headline, short lede, both buttons, then the photo (still fully inside the first screen at 390x844).
+- **Spacing.** Sections are 96px on desktop and 56px on phones. No two same-colour bands touch on any page (checked in the browser). On phones, long lists are compacted: icon cards go horizontal, steps become numbered rows, and the home service lists become 2-column tiles (icon and linked title; the one-line summaries show on desktop and on each service page). A few repeats of nearby copy are hidden on phones only. The mobile home page went from 16,256px to about 11,430px.
+- **H1s** are sentence case everywhere ("Expert witness services in San Jose").

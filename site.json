@@ -74,40 +74,89 @@
       "note": "Lockup used in the current site header. Fallback reference only."
     },
     {
-      "file": "images/hero-office-desk.jpg",
-      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Sunlit walnut desk with an open laptop showing charts, a coffee cup and folders, beside a window over a palm-lined downtown street. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+      "file": "images/home-downtown-desk.jpg",
+      "page": "/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on / only. Not the real owner, staff, office or clients. An oak desk by a tall window with a closed laptop, cream folders and a mug, above a sunny downtown street with palm trees. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
     },
     {
-      "file": "images/bookkeeping-accounting.jpg",
-      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Hands writing in a ledger beside a pile of receipts, a calculator and a laptop. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+      "file": "images/about-work-table.jpg",
+      "page": "/about/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /about/ only. Not the real owner, staff, office or clients. A small round table with 2 chairs, paper folders and coffee cups on a stucco terrace beside a potted olive tree. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
     },
     {
-      "file": "images/controller-services.jpg",
-      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Conference table with a laptop and a large monitor showing financial dashboards, printed reports and a city view. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+      "file": "images/services-overview.jpg",
+      "page": "/services/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /services/ only. Not the real owner, staff, office or clients. An office shelf of box binders with blank spines, a wire in-tray and a trailing plant in light through wooden blinds. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
     },
     {
-      "file": "images/fractional-cfo.jpg",
-      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Quiet office with a leather notebook, a fountain pen and a laptop showing a chart, with a city skyline and palm trees outside. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+      "file": "images/svc-bookkeeping.jpg",
+      "page": "/services/bookkeeping-accounting/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /services/bookkeeping-accounting/ only. Not the real owner, staff, office or clients. A tray of sorted receipts beside an open paper ledger and a calculator on a light oak desk. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
     },
     {
-      "file": "images/tax-services.jpg",
-      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Desk with binders, a tray of folders, a closed laptop and eyeglasses in soft morning window light. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+      "file": "images/svc-controller.jpg",
+      "page": "/services/controller-services/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /services/controller-services/ only. Not the real owner, staff, office or clients. Month-end binders with blank coloured tabs, a stapler, a closed laptop and a water glass on a conference table. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
     },
     {
-      "file": "images/forensic-accounting.jpg",
-      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Hands comparing two stacks of highlighted spreadsheet printouts, with a highlighter, a pencil and a magnifying loupe. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+      "file": "images/svc-fractional-cfo.jpg",
+      "page": "/services/fractional-cfo/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /services/fractional-cfo/ only. Not the real owner, staff, office or clients. 2 leather chairs at a round table with a closed notebook and espresso cups, golden foothills through the window. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
     },
     {
-      "file": "images/trust-accounting.jpg",
-      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Cloth-bound ledgers, a tray of neatly filed folders and a brass paperweight on a sunlit desk. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+      "file": "images/svc-tax.jpg",
+      "page": "/services/tax-services/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /services/tax-services/ only. Not the real owner, staff, office or clients. An accordion folder, envelopes, a pencil and a paper desk calendar on a wooden desk, a palm tree outside. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
     },
     {
-      "file": "images/financial-investigations.jpg",
-      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Person holding two sets of printed financial records beside a laptop, comparing them line by line. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+      "file": "images/svc-forensic.jpg",
+      "page": "/services/forensic-accounting/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /services/forensic-accounting/ only. Not the real owner, staff, office or clients. A magnifying loupe on a stack of flagged photocopied statements beside an open banker's box on an outdoor table. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
     },
     {
-      "file": "images/expert-witness-services.jpg",
-      "note": "AI-generated illustration (Higgsfield), not the real owner, staff, office or clients. Shows: Wood-paneled conference room with a binder, a legal pad, a glass of water and an empty chair. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+      "file": "images/svc-trust.jpg",
+      "page": "/services/trust-accounting/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /services/trust-accounting/ only. Not the real owner, staff, office or clients. A bookshelf of plain cloth-bound volumes, with a closed leather folio and a fountain pen on a walnut side table. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/svc-investigations.jpg",
+      "page": "/services/financial-investigations/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /services/financial-investigations/ only. Not the real owner, staff, office or clients. Banker's boxes and fanned manila folders on a long table in a plain records room under a skylight. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/svc-expert-witness.jpg",
+      "page": "/services/expert-witness-services/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /services/expert-witness-services/ only. Not the real owner, staff, office or clients. An empty wood-panelled conference room with a closed binder, a legal pad and a glass of water. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/area-overview.jpg",
+      "page": "/service-areas/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /service-areas/ only. Not the real owner, staff, office or clients. The santa clara valley at golden hour, a low-rise city grid and rows of trees below dry golden foothills. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/area-san-jose.jpg",
+      "page": "/service-areas/san-jose-ca/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /service-areas/san-jose-ca/ only. Not the real owner, staff, office or clients. A downtown street with light-rail tracks, tall palms and mid-rise buildings in late afternoon sun. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/area-santa-clara.jpg",
+      "page": "/service-areas/santa-clara-ca/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /service-areas/santa-clara-ca/ only. Not the real owner, staff, office or clients. A mission-style arcade of white stucco arches and terracotta roof tiles with olive trees. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/area-sunnyvale.jpg",
+      "page": "/service-areas/sunnyvale-ca/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /service-areas/sunnyvale-ca/ only. Not the real owner, staff, office or clients. A small historic downtown block of low brick and stucco storefronts with awnings and string lights. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/area-milpitas.jpg",
+      "page": "/service-areas/milpitas-ca/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /service-areas/milpitas-ca/ only. Not the real owner, staff, office or clients. A light-industrial business park with roll-up doors and work trucks below green spring foothills. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
+    },
+    {
+      "file": "images/area-campbell.jpg",
+      "page": "/service-areas/campbell-ca/",
+      "note": "AI-generated illustration (Higgsfield GPT Image 2.6), used on /service-areas/campbell-ca/ only. Not the real owner, staff, office or clients. A small-town main street with low shops, shade trees and café chairs on the sidewalk. WebP copies at 800, 1280 and 1920px wide and an 800px JPG sit beside it."
     },
     {
       "file": "favicon.png",
