@@ -80,3 +80,7 @@ The chat widget's open welcome bubble covered hero copy on phones on 13 pages. F
 - **Contact us** centres the form in the space above the bubble corner (150px kept clear on phones, 190px on desktop), and the contact section has 56px more room below the form on phones.
 - **Checked** at first load on all 21 pages: nothing in the bottom 210px at 390x844, and nothing in the bottom-right 420x190px at 1440x900. The same check, run on the previous commit, flags the pages that were reported.
 - If a hero headline or lede is made longer, check that both hero buttons still end above the bottom 210px at 390x844.
+
+## Service Areas dropdown (November 2026)
+
+"Service Areas" in the main menu is now a dropdown like Services: the 5 city pages and "All service areas" (desktop: opens on hover, on keyboard focus or with the arrow button, Escape closes it; phone menu: expandable list). The menu still fits on one row from 1100px. A dropdown's top item is underlined only when you are on one of its own pages.

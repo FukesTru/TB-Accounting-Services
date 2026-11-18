@@ -14,9 +14,12 @@
     var href = a.getAttribute('href');
     if (href === path) a.setAttribute('aria-current', 'page');
   });
-  if (path.indexOf('/services/') === 0) {
-    d.querySelectorAll('.nav-list .has-sub').forEach(function (li) { li.classList.add('is-current'); });
-  }
+  /* A dropdown's top item is marked when you are on one of its pages (Services or Service Areas) */
+  d.querySelectorAll('.nav-list .has-sub').forEach(function (li) {
+    var top = li.querySelector('a');
+    var href = top && top.getAttribute('href');
+    if (href && href !== '/' && path.indexOf(href) === 0) li.classList.add('is-current');
+  });
 
   /* Mobile menu */
   var toggle = d.querySelector('.menu-toggle');

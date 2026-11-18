@@ -746,3 +746,7 @@ html.js.show-fabs.contact-in-view .mobile-bar { opacity: 0; visibility: hidden; 
 }
 /* Room under the form so the chat button never sits on the last lines of the contact section */
 @media (max-width: 767px) { .contact-section { padding-bottom: calc(var(--section) + 56px); } }
+/* Service Areas dropdown: a shorter list, so a narrower panel */
+.sub--areas { min-width: 220px; }
+.mobile-sub-row .sub-toggle .icon { transition: transform .2s var(--ease); }
+.mobile-nav li.open > .mobile-sub-row .sub-toggle .icon { transform: rotate(180deg); }
