@@ -66,7 +66,7 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   /* Every Contact us button lands with the whole form in the middle of the screen */
-  function barHeight() { return desktop.matches ? 100 : 92; } /* keep the form above the round buttons and the chat button */
+  function barHeight() { return desktop.matches ? 190 : 150; } /* keep the form clear of the corner where the chat widget's welcome bubble opens */
   function centerForm(smooth) {
     var card = d.querySelector('#contact .form-card') || d.getElementById('contact');
     if (!card) return false;

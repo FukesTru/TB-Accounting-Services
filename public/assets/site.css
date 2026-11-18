@@ -686,3 +686,63 @@ html.js.show-fabs.contact-in-view .mobile-bar { opacity: 0; visibility: hidden; 
 @media (max-width: 767px) {
   .cards .card.area-card > * { align-self: flex-start !important; order: 0 !important; }
 }
+
+/* ===== Revision 3b: keep the chat widget's open welcome bubble off the copy =====
+   Every hero fills the first screen. Phone: eyebrow, headline, short lede, photo and both buttons sit
+   above a band kept clear at the bottom for the bubble (and the round buttons); the rest of the lede,
+   the proof line and any side card follow below the band. Desktop: copy on the left, photo or side
+   card on the right, top-aligned; the photo stops above the bottom-right corner where the bubble opens,
+   and the hero reaches the bottom of the first screen, so that corner only ever shows hero background. */
+:root { --hero-top: 16px; --chat-zone: 210px; }
+@media (min-width: 960px) { :root { --hero-top: 56px; --chat-zone: 190px; } }
+.hero2 { padding: var(--hero-top) 0 0; }
+.hero2-layout { display: grid; grid-template-columns: minmax(0, 1fr); }
+.hero2-main {
+  display: flex; flex-direction: column;
+  min-height: calc(100vh - var(--header-h) - var(--hero-top));
+  min-height: calc(100svh - var(--header-h) - var(--hero-top));
+  padding-bottom: var(--chat-zone);
+}
+.hero2-main > .eyebrow { align-self: flex-start; margin-bottom: 12px; }
+.hero2 h1 { margin: 0; }
+.hero2 .hero-lede { margin: 12px 0 0; }
+.hero2 .answer-more { margin: 0; font-size: var(--fs-lede); line-height: 1.6; }
+.hero2 .hero-media { margin-top: 16px; }
+.hero2 .hero-media .media { aspect-ratio: 2.2 / 1; }
+.hero2-cta { margin-top: 16px; }
+.hero2-cta .btn-pair { margin-top: 0; }
+.hero2-rest { padding-bottom: 40px; }
+.hero2-rest .proof-line { margin-top: 16px; }
+.hero2-side { padding-bottom: 48px; }
+.hero2 .updated { margin-top: 14px; }
+.hero2-layout--solo .hero2-main { justify-content: center; }
+@media (max-width: 959px) {
+  /* Both hero buttons share one row, so they stay above the band kept for the bubble */
+  .hero2-cta .btn-pair { display: flex; gap: 10px; }
+  .hero2-cta .btn { flex: 1 1 0; min-width: 0; min-height: 50px; padding: 0 10px; font-size: 0.9375rem; gap: 8px; }
+  .hero2-cta .btn .icon { width: 18px; height: 18px; }
+  .hero2-rest .answer-more:first-child { margin-top: 0; }
+}
+@media (min-width: 960px) {
+  .hero2-layout {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); column-gap: 72px;
+    grid-template-areas: "eyebrow media" "title media" "lede media" "more media" "cta media" "proof media" ". media";
+    grid-template-rows: repeat(6, auto) 1fr;
+    min-height: calc(100vh - var(--header-h) - var(--hero-top));
+    padding-bottom: 48px;
+  }
+  .hero2-main, .hero2-rest { display: contents; }
+  .hero2-main > .eyebrow { grid-area: eyebrow; }
+  .hero2-main > h1 { grid-area: title; }
+  .hero2 .hero-lede { grid-area: lede; margin-top: 20px; }
+  .hero2-rest > .answer-more { grid-area: more; margin-top: 12px; }
+  .hero2-cta { grid-area: cta; margin-top: 32px; }
+  .hero2-rest > .proof-line { grid-area: proof; margin-top: 20px; }
+  .hero2 .hero-media, .hero2-side { grid-area: media; align-self: start; margin-top: 4px; padding-bottom: 0; }
+  .hero2 .hero-media .media { aspect-ratio: 4 / 3; max-height: max(260px, calc(100vh - var(--header-h) - var(--hero-top) - var(--chat-zone) - 40px)); }
+  .hero2-layout--solo { display: block; padding-bottom: 0; }
+  .hero2-layout--solo .hero2-main { display: flex; }
+  .hero2-layout--solo .hero2-main > * { grid-area: auto; }
+}
+/* Room under the form so the chat button never sits on the last lines of the contact section */
+@media (max-width: 767px) { .contact-section { padding-bottom: calc(var(--section) + 56px); } }
